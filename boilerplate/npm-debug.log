@@ -1,0 +1,120 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/jhonylucas/projetos/estudos/web/electron-boilerplate/boilerplate',
+5 verbose install   [ 'electron-debug', 'electron-packager', 'electron-prebuilt' ] ]
+6 info preinstall app@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'electron-debug@^0.1.1', null ]
+9 verbose cache add name=undefined spec="electron-debug@^0.1.1" args=["electron-debug@^0.1.1",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'electron-debug@^0.1.1',
+10 verbose parsed url   path: 'electron-debug@^0.1.1',
+10 verbose parsed url   href: 'electron-debug@^0.1.1' }
+11 verbose cache add [ 'electron-packager@^5.0.0', null ]
+12 verbose cache add name=undefined spec="electron-packager@^5.0.0" args=["electron-packager@^5.0.0",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'electron-packager@^5.0.0',
+13 verbose parsed url   path: 'electron-packager@^5.0.0',
+13 verbose parsed url   href: 'electron-packager@^5.0.0' }
+14 verbose cache add [ 'electron-prebuilt@^0.30.4', null ]
+15 verbose cache add name=undefined spec="electron-prebuilt@^0.30.4" args=["electron-prebuilt@^0.30.4",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'electron-prebuilt@^0.30.4',
+16 verbose parsed url   path: 'electron-prebuilt@^0.30.4',
+16 verbose parsed url   href: 'electron-prebuilt@^0.30.4' }
+17 verbose cache add name="electron-debug" spec="^0.1.1" args=["electron-debug","^0.1.1"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '^0.1.1',
+18 verbose parsed url   path: '^0.1.1',
+18 verbose parsed url   href: '^0.1.1' }
+19 verbose addNamed [ 'electron-debug', '^0.1.1' ]
+20 verbose addNamed [ null, '>=0.1.1-0 <0.2.0-0' ]
+21 verbose cache add name="electron-packager" spec="^5.0.0" args=["electron-packager","^5.0.0"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '^5.0.0',
+22 verbose parsed url   path: '^5.0.0',
+22 verbose parsed url   href: '^5.0.0' }
+23 verbose addNamed [ 'electron-packager', '^5.0.0' ]
+24 verbose addNamed [ null, '>=5.0.0-0 <6.0.0-0' ]
+25 verbose cache add name="electron-prebuilt" spec="^0.30.4" args=["electron-prebuilt","^0.30.4"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '^0.30.4',
+26 verbose parsed url   path: '^0.30.4',
+26 verbose parsed url   href: '^0.30.4' }
+27 verbose addNamed [ 'electron-prebuilt', '^0.30.4' ]
+28 verbose addNamed [ null, '>=0.30.4-0 <0.31.0-0' ]
+29 silly lockFile f8f2da35-electron-debug-0-1-1 electron-debug@^0.1.1
+30 verbose lock electron-debug@^0.1.1 /Users/jhonylucas/.npm/f8f2da35-electron-debug-0-1-1.lock
+31 silly lockFile 12437695-electron-packager-5-0-0 electron-packager@^5.0.0
+32 verbose lock electron-packager@^5.0.0 /Users/jhonylucas/.npm/12437695-electron-packager-5-0-0.lock
+33 silly lockFile 01470a02-electron-prebuilt-0-30-4 electron-prebuilt@^0.30.4
+34 verbose lock electron-prebuilt@^0.30.4 /Users/jhonylucas/.npm/01470a02-electron-prebuilt-0-30-4.lock
+35 silly lockFile f8f2da35-electron-debug-0-1-1 electron-debug@^0.1.1
+36 error Error: Attempt to unlock electron-debug@^0.1.1, which hasn't been locked
+36 error     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:44:11)
+36 error     at cb (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:32:5)
+36 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:41:20
+36 error     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:30:7
+36 error     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+36 error     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+36 error     at Object.oncomplete (fs.js:107:15)
+37 error If you need help, you may report this *entire* log,
+37 error including the npm and node versions, at:
+37 error     <http://github.com/npm/npm/issues>
+38 error System Darwin 13.4.0
+39 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+40 error cwd /Users/jhonylucas/projetos/estudos/web/electron-boilerplate/boilerplate
+41 error node -v v0.10.33
+42 error npm -v 1.4.28
+43 verbose exit [ 1, true ]

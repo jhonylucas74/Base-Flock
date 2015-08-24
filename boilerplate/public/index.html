@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Base Flock</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CDN FONTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- BOWER CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/font-awesome.min.css">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- BOWER JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/app.js"></script>
+  <script src="js/factorys/postgresql.js"></script>
+
+</head>
+<body ng-app="baseFlock">
+  <header>
+    <div class="header-title">
+      <h3 class="title">Base Flock</h3>
+    </div>
+    <div class="header-content">
+      <button class="primary"><i class="fa fa-sort"></i>localhost:8080</button>
+    </div>
+
+  </header>
+  <div class="container">
+    <!-- left menu -->
+    <div id="left-menu" class="left-menu" ng-controller="leftMenu">
+      <label>Data bases</label>
+      <ul>
+        <li ng-repeat="item in bases" ng-class="item.class" ng-click="selectBase($index)">
+          {{ item.name }}
+        </li>
+      </ul>
+
+      <br>
+
+      <label ng-show="tables.length > 0">Tables</label>
+      <ul>
+        <li ng-repeat="item in tables" ng-class="item.class" ng-click="selectTable($index)">{{ item.name }}</li>
+      </ul>
+
+    </div><!--
+  --><div id="content" class="content" data-simplebar-direction="vertical">
+      <div ng-view></div>
+    </div>
+  </div>
+
+
+</body>
+</html>

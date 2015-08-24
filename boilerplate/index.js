@@ -10,12 +10,12 @@ require('electron-debug')();
 
 function createMainWindow () {
 	const win = new BrowserWindow({
-		width: 600,
-		height: 400,
-		resizable: false
+		width: 1000,
+		height: 750,
+		resizable: true
 	});
 
-	win.loadUrl(`file://${__dirname}/index.html`);
+	win.loadUrl(`file://${__dirname}/public/index.html`);
 	win.on('closed', onClosed);
 
 	return win;

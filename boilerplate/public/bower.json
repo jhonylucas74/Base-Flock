@@ -1,0 +1,18 @@
+{
+  "name": "baseFlock",
+  "version": "0.0.1",
+  "authors": [
+    "Jhony Lucas <jhonyjl37@gmail.com>"
+  ],
+  "description": "Base flock",
+  "keywords": [
+    "base Flock"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
+    "fontawesome": "~4.3.0"
+  }
+}

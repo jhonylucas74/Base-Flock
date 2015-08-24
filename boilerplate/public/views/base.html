@@ -1,0 +1,30 @@
+<div class="box white">
+  <textarea class="sql-edit" spellcheck="false" ng-model='sql'>   </textarea>
+  <h3 class="sql-edit-text"> SQL Editor <h3>
+  <button class="confirm" ng-click="executeSql()"> Executar </button>
+</div>
+
+<div ng-show="err" class="message-error">{{ err }}</div>
+
+<div class="result-box" ng-show="schema">
+  <table class="table-result full"  cellspacing="0" cellpadding="0">
+    <tr class="header">
+      <td ng-repeat="item in schema.fields">{{ item }}</td>
+    </tr>
+    <tr ng-repeat="row in schema.result">
+      <td ng-repeat="item in schema.fields">{{ row[item] }}</td>
+    </tr>
+  </table>
+</div>
+
+
+<div id="box-table" class="result-box">
+  <table id="table" class="table-result" cellspacing="0" cellpadding="0">
+    <tr class="header">
+      <td ng-repeat="item in fields">{{ item }}</td>
+    </tr>
+    <tr ng-repeat="row in result">
+      <td ng-repeat="item in fields">{{ row[item] }}</td>
+    </tr>
+  </table>
+</div>
