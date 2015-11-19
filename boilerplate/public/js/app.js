@@ -9,12 +9,17 @@ app.config(['$routeProvider',
     });
 
     route.when('/base', {
-      templateUrl: 'views/base.html'
+      templateUrl: 'views/base.html',
+      controller: 'Sql'
+    });
+
+    route.when('/novo-servidor', {
+      templateUrl: 'views/novo-servidor.html'
     });
 
     route.when('/table/:name', {
       templateUrl: 'views/base.html',
-      controller: 'Table',
+      controller: 'Sql',
       cache: false
     });
 
@@ -24,6 +29,26 @@ app.config(['$routeProvider',
 
   }]);
 
+app.run(function($rootScope, $window){
+  $rootScope.isShowServers = null;
+
+  $rootScope.goNovoServidor = function(){
+    $window.location = "#/novo-servidor";
+  };
+});
+
+app.controller('header',function($scope, $rootScope, $document){
+
+  $scope.show = function() {
+    $rootScope.isShowServers = true;
+  };
+
+  $document.on('click', function(){
+    $rootScope.isShowServers = null;
+  });
+
+
+});
 
 app.controller('leftMenu', function($scope, psql, $window){
 
@@ -64,7 +89,8 @@ app.controller('leftMenu', function($scope, psql, $window){
 });
 
 
-app.controller('Table', function($scope, psql, $routeParams) {
+app.controller('Sql', function($scope, psql, $routeParams) {
+  $scope.sql = "";
 
   var table = $routeParams.name;
   setTableWidth('box-table', 'table');
@@ -81,6 +107,25 @@ app.controller('Table', function($scope, psql, $routeParams) {
       if(res[0]) $scope.schema.fields = Object.keys(res[0]);
     });
   }
+
+  /* For SQL EDITOR */
+  var elmSqlEdit  = document.getElementById("sql-edit"); // textarea edit
+  var elmSqlTitle = document.getElementById("sql-edit-text"); // title
+  // Set focus in Sql editor
+  $scope.focusSqlEditor = function() {
+    elmSqlEdit.focus();
+  };
+
+  // Set hide for the Title Sql editor
+  elmSqlEdit.addEventListener("focus", function(){
+    elmSqlTitle.style.display = 'none';
+  });
+
+  // when loast focus, shoe Title Sql editor
+  elmSqlEdit.addEventListener("focusout", function(){
+    if($scope.sql.length == 0)
+      elmSqlTitle.style.display = 'block';
+  });
 
   $scope.executeSql = function(){
 

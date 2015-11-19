@@ -35,34 +35,52 @@
 
 </head>
 <body ng-app="baseFlock">
-  <header>
+  <header ng-controller="header">
     <div class="header-title">
       <h3 class="title">Base Flock</h3>
     </div>
     <div class="header-content">
-      <button class="primary"><i class="fa fa-sort"></i>localhost:8080</button>
+      <button class="primary" ng-click="show()"><i class="fa fa-sort"></i>localhost:8080</button>
     </div>
 
   </header>
   <div class="container">
     <!-- left menu -->
     <div id="left-menu" class="left-menu" ng-controller="leftMenu">
-      <label>Data bases</label>
-      <ul>
-        <li ng-repeat="item in bases" ng-class="item.class" ng-click="selectBase($index)">
-          {{ item.name }}
-        </li>
-      </ul>
 
-      <br>
+      <div class="section">
+        <label>Data bases</label>
+        <ul>
+          <li ng-repeat="item in bases" ng-class="item.class" ng-click="selectBase($index)">
+            {{ item.name }}
+          </li>
+        </ul>
+      </div>
 
-      <label ng-show="tables.length > 0">Tables</label>
-      <ul>
-        <li ng-repeat="item in tables" ng-class="item.class" ng-click="selectTable($index)">{{ item.name }}</li>
-      </ul>
+
+      <div class="section">
+        <br>
+        <label ng-show="tables.length > 0">Tables</label>
+        <ul>
+          <li ng-repeat="item in tables" ng-class="item.class" ng-click="selectTable($index)">{{ item.name }}</li>
+        </ul>
+      </div>
+
 
     </div><!--
   --><div id="content" class="content" data-simplebar-direction="vertical">
+
+      <div class="servers-modal" ng-show="isShowServers">
+        <ul>
+          <li>http: / / localhost:8000</li>
+          <li>http: / / localhost:8000</li>
+          <li>http: / / localhost:8000</li>
+          <li>http: / / localhost:8000</li>
+          <li class="soft" ng-click="goNovoServidor()"> <i class="fa fa-plus-square-o"></i> Adicionar servidor</li>
+          <li class="soft" > <i class="fa fa-close"></i> Fechar</li>
+        </ul>
+      </div>
+
       <div ng-view></div>
     </div>
   </div>

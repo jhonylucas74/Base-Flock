@@ -1,6 +1,6 @@
 <div class="box white">
-  <textarea class="sql-edit" spellcheck="false" ng-model='sql'>   </textarea>
-  <h3 class="sql-edit-text"> SQL Editor <h3>
+  <textarea id="sql-edit" class="sql-edit" spellcheck="false" ng-model='sql'>   </textarea>
+  <h3 id="sql-edit-text" class="sql-edit-text" ng-click="focusSqlEditor()"> SQL Editor </h3>
   <button class="confirm" ng-click="executeSql()"> Executar </button>
 </div>
 
